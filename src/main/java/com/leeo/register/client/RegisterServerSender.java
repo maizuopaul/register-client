@@ -25,4 +25,13 @@ public class RegisterServerSender implements Serializable {
         System.out.println("注册成功:[" + request + "]");
         return response;
     }
+
+    public HeartbeatResponse heartbeat(String serviceName,String serviceInstanceId){
+
+        //TODO http 请求register-server 模拟返回结果
+        HeartbeatResponse response = new HeartbeatResponse();
+        System.out.println("发送心跳:serviceName="+serviceName + ";serviceInstanceId="+serviceInstanceId);
+        response.setCode(HeartbeatResponse.SUCCESS);
+        return response;
+    }
 }

@@ -8,6 +8,11 @@ import java.io.Serializable;
 public class RegisterClientRequest  implements Serializable {
 
     /**
+     * 服务名称 用于标识是属于哪个服务 比如订单服务/商品服务
+     */
+    private String serviceName;
+
+    /**
      * 服务id 用于标识不同服务
      */
     private String serviceInstanceId;
@@ -27,6 +32,14 @@ public class RegisterClientRequest  implements Serializable {
      */
     private String hostname;
 
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
 
     public String getServiceInstanceId() {
         return serviceInstanceId;
